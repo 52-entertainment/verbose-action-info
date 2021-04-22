@@ -1,0 +1,28 @@
+{
+  "name": "verbose-action-info",
+  "version": "1.0.0",
+  "description": "Get more verbose information about the running action",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bradshaw/verbose-action-info.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "info"
+  ],
+  "author": "Gaeel Bradshaw-Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bradshaw/verbose-action-info/issues"
+  },
+  "homepage": "https://github.com/Bradshaw/verbose-action-info#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0"
+  }
+}
