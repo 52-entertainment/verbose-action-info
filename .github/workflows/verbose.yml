@@ -1,4 +1,5 @@
 on:
+  pull_request: {}
   push: {}
   workflow_dispatch: {}
 
@@ -9,5 +10,9 @@ jobs:
     - name: Verbose Info
       id: verbose
       uses: Bradshaw/verbose-action-info@main
-    - run: echo ${{ steps.verbose.outputs.prettyEvent }}
-    - run: echo ${{ steps.verbose.outputs.runURL }}
+    - run: echo Verbose event string ${{ steps.verbose.outputs.event }}
+    - run: echo Run URL ${{ steps.verbose.outputs.run_url }}
+    - run: echo Event name ${{ steps.verbose.outputs.name }}
+    - run: echo Pull request number ${{ steps.verbose.outputs.pr_url }}
+    - run: echo PR URL ${{ steps.verbose.outputs.pr_url }}
+    - run: echo Short commit hash ${{ steps.verbose.outputs.sha }}
