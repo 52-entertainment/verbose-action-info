@@ -11,3 +11,5 @@ jobs:
       uses: Bradshaw/verbose-action-info@main
     - run: echo ${{ steps.verbose.outputs.prettyEvent }}
     - run: echo ${{ steps.verbose.outputs.runURL }}
+    - run: echo ${{ steps.verbose.outputs.prettyEventName }}
+    - run: echo ${{ steps.verbose.outputs.PR }}
