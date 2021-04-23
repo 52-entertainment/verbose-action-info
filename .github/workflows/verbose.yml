@@ -16,3 +16,4 @@ jobs:
     - run: echo Pull request number ${{ steps.verbose.outputs.pr_url }}
     - run: echo PR URL ${{ steps.verbose.outputs.pr_url }}
     - run: echo Short commit hash ${{ steps.verbose.outputs.sha }}
+    - run: echo Commit URL ${{ steps.verbose.outputs.commit_url }}
