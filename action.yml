@@ -1,0 +1,5 @@
+name: 'Verbose Action Info'
+description: 'Get more verbose action information'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

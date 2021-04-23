@@ -1,0 +1,13 @@
+on:
+  push: {}
+  workflow_dispatch: {}
+
+jobs:
+  verbose-info:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Verbose Info
+      id: verbose
+      uses: Bradshaw/verbose-action-info@main
+    - run: echo ${{ steps.verbose.outputs.prettyEvent }}
+    - run: echo ${{ steps.verbose.outputs.runURL }}
