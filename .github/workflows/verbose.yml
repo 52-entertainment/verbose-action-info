@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: Verbose Info
       id: verbose
-      uses: Bradshaw/verbose-action-info@main
+      uses: 52-entertainment/verbose-action-info@main
     - run: echo Verbose event string ${{ steps.verbose.outputs.event }}
     - run: echo Run URL ${{ steps.verbose.outputs.run_url }}
     - run: echo Event name ${{ steps.verbose.outputs.name }}
