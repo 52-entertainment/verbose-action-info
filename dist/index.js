@@ -6057,6 +6057,31 @@ try {
     .split('_')
     .map(s=>s.charAt(0).toUpperCase() + s.slice(1))
     .join(' ');
+
+  let refrgx = /refs\/(?<type>head|tag)s\/(?<ref>.*)/;
+
+  let parsedRef = refrgx.exec(context.ref);
+
+  let shortRef;
+  let refType;
+
+  if (parsedRef) {
+    shortRef = parsedRef.groups.ref;
+		switch (parsedRef.groups.type){
+      case "heads":
+        refType = "branch";
+        break;
+      case "tags":
+        refType = "tag";
+        break;
+      default:
+        refType = parsedRef.groups.type;
+    }
+  } else {
+    shortRef = context.ref;
+    refType = "none"
+  }
+
   let shortSHA = context.sha.substr(0,8);
   switch (context.eventName) {
     case "push":
@@ -6076,6 +6101,8 @@ try {
         .join(' ');
       event = `${prettyEventName} by ${context.actor}`;
   }
+  core.setOutput('ref', shortRef)
+  core.setOutput('ref_type', refType)
   core.setOutput('sha', shortSHA)
   core.setOutput('event', event)
   core.setOutput('name', prettyEventName)
