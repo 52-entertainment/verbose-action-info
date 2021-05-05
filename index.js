@@ -65,6 +65,7 @@ try {
   core.setOutput('pull_request', pullRequestNumber)
   core.setOutput('run_url', `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}`)
   core.setOutput('commit_url', `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/commit/${shortSHA}`)
+  core.setOutput('ref_url', `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/tree/${shortRef}`)
   core.setOutput('pr_url', pullRequestNumber.length>0 ? `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/pull/${pullRequestNumber}` : "")
 
 } catch (error) {

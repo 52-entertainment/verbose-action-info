@@ -17,5 +17,6 @@ jobs:
     - run: echo PR URL ${{ steps.verbose.outputs.pr_url }}
     - run: echo Short commit hash ${{ steps.verbose.outputs.sha }}
     - run: echo Commit URL ${{ steps.verbose.outputs.commit_url }}
+    - run: echo Ref URL ${{ steps.verbose.outputs.ref_url }}
     - run: echo Ref ${{ steps.verbose.outputs.ref }}
     - run: echo Ref type ${{ steps.verbose.outputs.ref_type }}
